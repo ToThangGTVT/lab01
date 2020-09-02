@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Work } from '../datatype/Work';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
+@Injectable()
 export class TodoComponent implements OnInit {
 
   constructor() { }
@@ -26,9 +28,4 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-}
-
-interface Work {
-  title: string;
-  status: boolean;
 }

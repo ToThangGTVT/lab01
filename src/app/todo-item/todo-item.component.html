@@ -1,3 +1,7 @@
-<p class="text-secondary">{{item+' '}}
-    <button (click)="handleDelete()">Done</button>
-</p>
+<div class="row mb-3">
+    <div *ngIf="work.status; then thenBlock else elseBlock"></div>
+    <ng-template #elseBlock><button class="btn bg-primary text-white" (click)="handleDone()">Done</button></ng-template>
+    <ng-template #thenBlock><button class= "btn bg-warning text-dark" (click)="handleUnDone()">UnDone</button></ng-template>
+    <p class="text-secondary my-auto ml-2">{{work.title}}</p>
+</div>
+
